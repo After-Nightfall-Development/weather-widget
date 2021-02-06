@@ -5,7 +5,7 @@ import reportWebVitals from './report-web-vitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App displayAppBar={true} title={'Weather Widget'} />
   </React.StrictMode>,
   document.getElementById('root')
 );
