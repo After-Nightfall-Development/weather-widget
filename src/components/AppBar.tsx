@@ -30,5 +30,5 @@ export default function TopAppBar(props: TopAppBarProps): JSX.Element {
 }
 
 export interface TopAppBarProps {
-  title?: string;
+  title: string;
 }
