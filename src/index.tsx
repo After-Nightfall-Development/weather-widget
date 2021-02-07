@@ -2,10 +2,16 @@ import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './report-web-vitals';
+import { createStore } from './configs/redux/store';
+import { Provider } from 'react-redux';
+
+const store = createStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App displayAppBar={true} title={'Weather Widget'} />
+    <Provider store={store}>
+      <App displayAppBar={true} title={'Weather Widget'} />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
