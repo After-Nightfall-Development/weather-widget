@@ -28,7 +28,7 @@ class App extends Component<AppProps> {
         <CssBaseline />
         {displayAppBar ? <AppBar title={title} /> : undefined}
 
-        <Grid container spacing={2} className={classes.root}>
+        <Grid container className={classes.root}>
           <Grid item xs={12}>
             <ForecastCard />
           </Grid>
