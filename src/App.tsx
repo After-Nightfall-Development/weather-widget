@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import {
   Theme,
   WithStyles,
@@ -6,17 +5,13 @@ import {
   StyledComponentProps,
   ThemeProvider as MuiThemeProvider,
 } from '@material-ui/core/styles';
-import { Styles } from '@material-ui/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from './components/AppBar';
+import { Grid } from '@material-ui/core';
+import React, { Component } from 'react';
+import { Styles } from '@material-ui/styles';
+import ForecastCard from './components/ForecastCard';
 import { getTheme } from './configs/themes/dark-theme';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Grid,
-  Typography,
-} from '@material-ui/core';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const styles: Styles<Theme, StyledComponentProps> = (theme: Theme) => ({
   root: {
@@ -35,12 +30,7 @@ class App extends Component<AppProps> {
 
         <Grid container spacing={2} className={classes.root}>
           <Grid item xs={12}>
-            <Card>
-              <CardHeader />
-              <CardContent>
-                <Typography>{'Card Content'}</Typography>
-              </CardContent>
-            </Card>
+            <ForecastCard />
           </Grid>
         </Grid>
       </MuiThemeProvider>
